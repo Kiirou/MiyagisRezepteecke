@@ -22,8 +22,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText"
+    <EditText
+        android:id="@+id/edtName"
         android:layout_width="370dp"
         android:layout_height="46dp"
         android:hint="Rezeptname eingeben"
@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.11" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/edtRecipeLayout"
         android:layout_width="375dp"
         android:layout_height="434dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,16 +43,17 @@
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.636">
+        app:layout_constraintVertical_bias="0.946">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
+            android:id="@+id/edtRecipesteps"
             android:layout_width="374dp"
             android:layout_height="wrap_content"
             android:hint="Rezept eingeben" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="add"
