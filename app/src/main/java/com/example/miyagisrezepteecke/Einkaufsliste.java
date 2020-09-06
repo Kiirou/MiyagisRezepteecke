@@ -115,7 +115,7 @@ public class Einkaufsliste extends AppCompatActivity {
 
     public void removeElement(String selectedItem, final int position) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Möchtest du " + selectedItem + "entfernen?");
+        builder.setTitle("Möchtest du " + selectedItem + " entfernen?");
         builder.setPositiveButton("Ja", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
