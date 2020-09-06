@@ -66,7 +66,7 @@ public class Einkaufsliste extends AppCompatActivity {
 
         if (id == R.id.action_add) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("Add");
+            builder.setTitle("Hinzufügen");
             final EditText input = new EditText(this);
             builder.setView(input);
             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -78,7 +78,7 @@ public class Einkaufsliste extends AppCompatActivity {
                     lv.setAdapter(adapter);
                 }
             });
-            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            builder.setNegativeButton("Abbrechen", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.cancel();
@@ -94,7 +94,8 @@ public class Einkaufsliste extends AppCompatActivity {
     public static String preferredCase(String original) {
         if (original.isEmpty())
             return original;
-        return original.substring(0, 1).toUpperCase() + original.substring(1).toLowerCase();
+       // return original.substring(0, 1).toUpperCase() + original.substring(1).toLowerCase();
+        return original;
     }
 
     public static void storeArrayVal(ArrayList inArrayList, Context context) {
@@ -114,8 +115,8 @@ public class Einkaufsliste extends AppCompatActivity {
 
     public void removeElement(String selectedItem, final int position) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Remove " + selectedItem + "?");
-        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        builder.setTitle("Möchtest du " + selectedItem + "entfernen?");
+        builder.setPositiveButton("Ja", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 shoppingList.remove(position);
@@ -124,7 +125,7 @@ public class Einkaufsliste extends AppCompatActivity {
                 lv.setAdapter(adapter);
             }
         });
-        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("Nein", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();

@@ -25,7 +25,6 @@
 
         <activity android:name=".RecipeActivity"/>
         <activity android:name=".Einkaufsliste" />
-        <activity android:name=".AddRecipe" />
         <activity android:name=".MainActivity"
             android:parentActivityName=".AddRecipe">
 
