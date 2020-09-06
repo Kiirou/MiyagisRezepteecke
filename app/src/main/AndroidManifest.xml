@@ -23,11 +23,12 @@
 
 
 
-
+        <activity android:name=".RecipeActivity"/>
         <activity android:name=".Einkaufsliste" />
         <activity android:name=".AddRecipe" />
         <activity android:name=".MainActivity"
             android:parentActivityName=".AddRecipe">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
